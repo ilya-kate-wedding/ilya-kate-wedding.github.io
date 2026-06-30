@@ -7,7 +7,7 @@
     <meta name="description" content="Свадебное приглашение Ильи и Екатерины">
     <link rel="preload" href="assets/DkCrayonCrumble-ddll.ttf" as="font" type="font/ttf" crossorigin>
     <link rel="preload" href="assets/Lora-Variable.ttf" as="font" type="font/ttf" crossorigin>
-    <link rel="stylesheet" href="styles.css?v=20260630-final-motion2">
+    <link rel="stylesheet" href="styles.css?v=20260701-formspree1">
   </head>
   <body class="is-locked">
     <div class="start-screen" id="start-screen">
@@ -181,28 +181,30 @@
         <p class="tiny">Анкета гостя</p>
         <h2>Ответьте до 25 августа</h2>
         <p>Это поможет нам в организации торжества.</p>
-        <form id="guest-form">
+        <form id="guest-form" action="https://formspree.io/f/mpqgjgeq" method="post">
+          <input type="hidden" name="_subject" value="Новый ответ на свадебную анкету">
           <label>
             <span>Ваше имя и фамилия</span>
-            <input type="text" name="name" autocomplete="name" required>
+            <input type="text" name="Имя" autocomplete="name" required>
           </label>
           <fieldset>
             <legend>Сможете ли вы присутствовать?</legend>
-            <label><input type="radio" name="presence" value="yes" required> Смогу прийти</label>
-            <label><input type="radio" name="presence" value="no"> Не смогу прийти</label>
-            <label><input type="radio" name="presence" value="later"> Сообщу позже</label>
+            <label><input type="radio" name="Присутствие" value="Смогу прийти" required> Смогу прийти</label>
+            <label><input type="radio" name="Присутствие" value="Не смогу прийти"> Не смогу прийти</label>
+            <label><input type="radio" name="Присутствие" value="Сообщу позже"> Сообщу позже</label>
           </fieldset>
           <fieldset>
             <legend>Предпочтения по напиткам</legend>
-            <label><input type="checkbox" name="drink"> Шампанское</label>
-            <label><input type="checkbox" name="drink"> Белое вино</label>
-            <label><input type="checkbox" name="drink"> Красное вино</label>
-            <label><input type="checkbox" name="drink"> Коньяк</label>
-            <label><input type="checkbox" name="drink"> Водка</label>
-            <label><input type="checkbox" name="drink"> Папина настойка</label>
-            <label><input type="checkbox" name="drink"> Безалкогольные напитки</label>
+            <label><input type="checkbox" name="Напитки" value="Шампанское"> Шампанское</label>
+            <label><input type="checkbox" name="Напитки" value="Белое вино"> Белое вино</label>
+            <label><input type="checkbox" name="Напитки" value="Красное вино"> Красное вино</label>
+            <label><input type="checkbox" name="Напитки" value="Коньяк"> Коньяк</label>
+            <label><input type="checkbox" name="Напитки" value="Водка"> Водка</label>
+            <label><input type="checkbox" name="Напитки" value="Папина настойка"> Папина настойка</label>
+            <label><input type="checkbox" name="Напитки" value="Безалкогольные напитки"> Безалкогольные напитки</label>
           </fieldset>
           <button type="submit">Отправить</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
           <p class="policy">Нажимая кнопку «Отправить», вы соглашаетесь с обработкой персональных данных.</p>
         </form>
       </section>
@@ -221,6 +223,6 @@
       </footer>
     </main>
 
-    <script src="script.js?v=20260630-text-motion1"></script>
+    <script src="script.js?v=20260701-formspree1"></script>
   </body>
 </html>

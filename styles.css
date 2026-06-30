@@ -982,6 +982,23 @@ form button {
   line-height: 1.4;
 }
 
+.form-status {
+  min-height: 24px;
+  margin: 14px 0 0;
+  color: var(--sage);
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.form-status:empty {
+  min-height: 0;
+  margin-top: 0;
+}
+
+.form-status.is-error {
+  color: #9a4f67;
+}
+
 .final {
   min-height: 100svh;
   display: grid;

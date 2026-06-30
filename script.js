@@ -325,18 +325,42 @@ window.addEventListener("keydown", (event) => {
   }
 });
 
-guestForm?.addEventListener("submit", (event) => {
+guestForm?.addEventListener("submit", async (event) => {
   event.preventDefault();
   const button = event.currentTarget.querySelector("button");
-  button.textContent = "Спасибо ♥";
+  const status = event.currentTarget.querySelector(".form-status");
+  const formData = new FormData(event.currentTarget);
+
+  button.textContent = "Отправляем...";
   button.disabled = true;
-  document.body.classList.add("form-submitted");
-  finalSection?.classList.add("is-visible");
-  spawnFloatingHearts(true);
-  window.requestAnimationFrame(() => {
-    finalSection?.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
+  status.textContent = "";
+  status.classList.remove("is-error");
+
+  try {
+    const response = await fetch(event.currentTarget.action, {
+      method: "POST",
+      body: formData,
+      headers: {
+        Accept: "application/json",
+      },
     });
-  });
+
+    if (!response.ok) throw new Error(`Formspree returned ${response.status}`);
+
+    button.textContent = "Спасибо ♥";
+    document.body.classList.add("form-submitted");
+    finalSection?.classList.add("is-visible");
+    spawnFloatingHearts(true);
+    window.requestAnimationFrame(() => {
+      finalSection?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    });
+  } catch {
+    button.textContent = "Отправить";
+    button.disabled = false;
+    status.textContent = "Не получилось отправить ответ. Проверьте интернет и попробуйте ещё раз.";
+    status.classList.add("is-error");
+  }
 });
