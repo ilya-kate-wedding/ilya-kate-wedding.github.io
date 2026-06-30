@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Илья и Екатерина | 04.09.2026</title>
+    <meta name="description" content="Свадебное приглашение Ильи и Екатерины">
+    <link rel="preload" href="assets/DkCrayonCrumble-ddll.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="assets/Lora-Variable.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="stylesheet" href="styles.css?v=20260630-final-motion2">
+  </head>
+  <body class="is-locked">
+    <div class="start-screen" id="start-screen">
+      <div class="heart-scene" aria-hidden="true">
+        <span class="heart heart-main"></span>
+        <span class="heart heart-left"></span>
+        <span class="heart heart-right"></span>
+        <span class="heart heart-spark heart-spark-one"></span>
+        <span class="heart heart-spark heart-spark-two"></span>
+        <span class="heart heart-spark heart-spark-three"></span>
+        <span class="heart heart-spark heart-spark-four"></span>
+        <span class="heart heart-red"></span>
+      </div>
+      <h1>У нас<br>свадьба!</h1>
+      <p class="start-names">Илья и Екатерина</p>
+      <p class="start-date">04.09.2026</p>
+      <div class="heart-slider" id="open-invite" role="button" tabindex="0" aria-label="Проведите сердечко, чтобы открыть приглашение">
+        <span class="slider-fill"></span>
+        <span class="slider-text">Разблокировать приглашение</span>
+        <span class="slider-heart" aria-hidden="true"></span>
+      </div>
+    </div>
+
+    <button class="music-button" type="button" aria-label="Включить музыку">
+      <span class="music-note">♪</span>
+    </button>
+    <audio id="wedding-audio" src="assets/wedding-song-2026.mp3" loop preload="metadata"></audio>
+    <audio id="unlock-audio" src="assets/unlock.mp3" preload="auto"></audio>
+
+    <div class="floating-hearts" aria-hidden="true"></div>
+
+    <div class="scroll-doodles" aria-hidden="true">
+      <span class="doodle chalk-heart-big d-left d-1" data-show-at="0"></span>
+      <span class="doodle chalk-flower-white d-right d-2" data-show-at="360"></span>
+      <span class="doodle chalk-tulip d-left d-3" data-show-at="780"></span>
+      <span class="doodle chalk-heart-outline d-right d-4" data-show-at="1160"></span>
+      <span class="doodle chalk-leaves-right d-left d-5" data-show-at="1540"></span>
+      <span class="doodle chalk-rose d-right d-6" data-show-at="1960"></span>
+      <span class="doodle chalk-heart-small d-left d-7" data-show-at="2380"></span>
+      <span class="doodle chalk-hearts-double d-right d-8" data-show-at="2820"></span>
+      <span class="doodle chalk-flower-beige d-left d-9" data-show-at="3280"></span>
+      <span class="doodle chalk-star d-right d-10" data-show-at="3720"></span>
+    </div>
+
+    <main class="invite">
+      <section class="section first reveal">
+        <div class="names-block">
+          <h2>Илья <span class="name-plus">+</span> Екатерина</h2>
+        </div>
+        <div class="polaroid-photo">
+          <img src="assets/photo1.jpeg" alt="Илья и Екатерина">
+          <p>Охана - значит семья...</p>
+        </div>
+        <div class="names-block">
+          <p>а семья - это те, кто всегда рядом!</p>
+          <p>В день нашей свадьбы нам не хватает самого главного — <em>Вас</em>!</p>
+        </div>
+      </section>
+
+      <section class="section message reveal">
+        <h3>Дорогие и Любимые</h3>
+        <img class="flower-doodle" src="assets/flower-transparent.png" alt="" aria-hidden="true">
+        <p>Приглашаем вас разделить с нами этот важный момент и стать частью нашей истории любви!</p>
+        <div class="hand-line" aria-hidden="true"></div>
+      </section>
+
+      <section class="section date-section reveal">
+        <p class="tiny">День нашей свадьбы</p>
+        <div class="calendar-card" aria-label="Календарь: сентябрь 2026">
+          <h2>Сентябрь 2026</h2>
+          <div class="calendar-grid calendar-weekdays" aria-hidden="true">
+            <span>Пн</span>
+            <span>Вт</span>
+            <span>Ср</span>
+            <span>Чт</span>
+            <span>Пт</span>
+            <span>Сб</span>
+            <span>Вс</span>
+          </div>
+          <div class="calendar-grid calendar-days">
+            <span class="empty"></span>
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+            <button class="wedding-day" type="button" aria-label="4 сентября 2026, перейти к программе дня" aria-describedby="calendar-hint">
+              <span>4</span>
+            </button>
+            <span>5</span>
+            <span>6</span>
+            <span>7</span>
+            <span>8</span>
+            <span>9</span>
+            <span>10</span>
+            <span>11</span>
+            <span>12</span>
+            <span>13</span>
+            <span>14</span>
+            <span>15</span>
+            <span>16</span>
+            <span>17</span>
+            <span>18</span>
+            <span>19</span>
+            <span>20</span>
+            <span>21</span>
+            <span>22</span>
+            <span>23</span>
+            <span>24</span>
+            <span>25</span>
+            <span>26</span>
+            <span>27</span>
+            <span>28</span>
+            <span>29</span>
+            <span>30</span>
+          </div>
+        </div>
+        <p class="calendar-hint" id="calendar-hint">Нажмите на сердечко, чтобы продолжить</p>
+      </section>
+
+      <section class="section program reveal" id="program">
+        <p class="tiny">Программа дня</p>
+        <div class="program-grid">
+          <article class="program-item reveal">
+            <time>15:30</time>
+            <h3>Встречаемся за столом</h3>
+            <p>Начинаем наш праздничный вечер в кругу родных и близких.</p>
+          </article>
+          <article class="program-item reveal">
+            <time>16:00</time>
+            <h3>Время праздновать</h3>
+            <p>Тёплые слова, музыка, танцы и много поводов улыбаться.</p>
+          </article>
+          <article class="program-item reveal">
+            <time>21:00</time>
+            <h3>Самый сладкий момент</h3>
+            <p>Разрежем свадебный торт и обязательно поделимся со всеми.</p>
+          </article>
+          <article class="program-item reveal">
+            <time>23:00</time>
+            <h3>Финал нашего вечера</h3>
+            <p>Праздник подойдёт к концу, но приятные воспоминания останутся с нами.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section place reveal">
+        <div class="place-text">
+          <p class="tiny">Место проведения</p>
+          <h2>Ресторан «Лаванда»</h2>
+          <p>Будем ждать вас в ресторане «Лаванда».</p>
+          <a href="https://yandex.com/maps/-/CTU-qLY2" target="_blank" rel="noreferrer">Построить маршрут</a>
+        </div>
+        <div class="venue-illustration">
+          <img src="assets/restaurant-lavanda.png" alt="Ресторан Лаванда">
+        </div>
+      </section>
+
+      <section class="section dress reveal">
+        <p class="tiny">Дресс-код</p>
+        <h2>Без строгого дресс-кода</h2>
+        <p>Приходите в том образе, в котором вам будет красиво, свободно и комфортно.</p>
+        <p class="accent">Главное украшение вечера - ваше настроение!</p>
+      </section>
+
+      <section class="section wishes reveal">
+        <p class="tiny">Маленькое пожелание</p>
+        <p>Будем рады, если вместо букета вы подарите нам бутылочку вина или другого напитка. Мы сохраним её для особенного момента и откроем в день, который будет значим для нашей семьи.</p>
+        <p>Но самый главный подарок для нас - ваше присутствие. Приходите отдыхать, много смеяться, танцевать и прожить этот день вместе с нами!</p>
+      </section>
+
+      <section class="section questionnaire reveal">
+        <p class="tiny">Анкета гостя</p>
+        <h2>Ответьте до 25 августа</h2>
+        <p>Это поможет нам в организации торжества.</p>
+        <form id="guest-form">
+          <label>
+            <span>Ваше имя и фамилия</span>
+            <input type="text" name="name" autocomplete="name" required>
+          </label>
+          <fieldset>
+            <legend>Сможете ли вы присутствовать?</legend>
+            <label><input type="radio" name="presence" value="yes" required> Смогу прийти</label>
+            <label><input type="radio" name="presence" value="no"> Не смогу прийти</label>
+            <label><input type="radio" name="presence" value="later"> Сообщу позже</label>
+          </fieldset>
+          <fieldset>
+            <legend>Предпочтения по напиткам</legend>
+            <label><input type="checkbox" name="drink"> Шампанское</label>
+            <label><input type="checkbox" name="drink"> Белое вино</label>
+            <label><input type="checkbox" name="drink"> Красное вино</label>
+            <label><input type="checkbox" name="drink"> Коньяк</label>
+            <label><input type="checkbox" name="drink"> Водка</label>
+            <label><input type="checkbox" name="drink"> Папина настойка</label>
+            <label><input type="checkbox" name="drink"> Безалкогольные напитки</label>
+          </fieldset>
+          <button type="submit">Отправить</button>
+          <p class="policy">Нажимая кнопку «Отправить», вы соглашаетесь с обработкой персональных данных.</p>
+        </form>
+      </section>
+
+      <footer class="section final reveal" id="final">
+        <div class="final-collage" role="img" aria-label="Бумажные вырезки с Ильёй, Екатериной, Дусей и Марсом">
+          <img class="final-layer final-decor" src="assets/final-family-decor-v2.png" alt="">
+          <img class="final-layer final-face final-face-man" src="assets/final-family-man-v2.png" alt="">
+          <img class="final-layer final-face final-face-woman" src="assets/final-family-woman-v2.png" alt="">
+          <img class="final-layer final-face final-face-dog" src="assets/final-family-dog-v2.png" alt="">
+          <img class="final-layer final-face final-face-cat" src="assets/final-family-cat-v2.png" alt="">
+        </div>
+        <p>С большой любовью,</p>
+        <h2>Илья и Екатерина!</h2>
+        <p>Будем вас ждать!</p>
+      </footer>
+    </main>
+
+    <script src="script.js?v=20260630-text-motion1"></script>
+  </body>
+</html>
