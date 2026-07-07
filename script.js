@@ -12,6 +12,7 @@ const doodles = document.querySelectorAll(".doodle");
 const programItems = document.querySelectorAll(".program-item");
 const floatingHearts = document.querySelector(".floating-hearts");
 const weddingDayButton = document.querySelector(".wedding-day");
+let musicWanted = false;
 const calendarSection = document.querySelector(".date-section");
 let sliderDragging = false;
 let sliderMax = 0;
@@ -75,23 +76,32 @@ function spawnFloatingHearts(force = false) {
   if (!floatingHearts || document.body.classList.contains("is-locked")) return;
 
   const now = Date.now();
-  if (!force && now - lastHeartBurst < 1800) return;
+  if (!force && now - lastHeartBurst < 1100) return;
   lastHeartBurst = now;
 
   const side = Math.random() > 0.5 ? "right" : "left";
   const baseX = side === "right" ? 86 : 9;
-  const colors = ["rgba(142, 116, 179, 0.54)", "rgba(184, 158, 211, 0.5)", "rgba(111, 86, 143, 0.46)"];
+  const colors = [
+    "rgba(41, 72, 56, 0.82)",
+    "rgba(112, 139, 112, 0.8)",
+    "rgba(183, 145, 85, 0.82)",
+    "rgba(155, 98, 79, 0.76)",
+    "rgba(217, 190, 133, 0.86)",
+  ];
 
-  for (let index = 0; index < 3; index += 1) {
+  for (let index = 0; index < 6; index += 1) {
     const heart = document.createElement("span");
     heart.className = "float-heart-burst";
-    heart.style.setProperty("--x", `${baseX + (Math.random() * 8 - 4)}vw`);
-    heart.style.setProperty("--y", `${54 + Math.random() * 18}vh`);
-    heart.style.setProperty("--size", `${12 + Math.random() * 10}px`);
+    heart.style.setProperty("--x", `${baseX + (Math.random() * 13 - 6.5)}vw`);
+    heart.style.setProperty("--y", `${48 + Math.random() * 25}vh`);
+    heart.style.setProperty("--size", `${18 + Math.random() * 18}px`);
     heart.style.setProperty("--rotate", `${-18 + Math.random() * 34}deg`);
-    heart.style.setProperty("--drift", `${(side === "right" ? -1 : 1) * (18 + Math.random() * 34)}px`);
+    const drift = (side === "right" ? -1 : 1) * (30 + Math.random() * 64);
+    heart.style.setProperty("--drift", `${drift}px`);
+    heart.style.setProperty("--drift-mid", `${drift * 0.72}px`);
+    heart.style.setProperty("--lift", `${125 + Math.random() * 80}px`);
     heart.style.setProperty("--color", colors[index % colors.length]);
-    heart.style.animationDelay = `${index * 0.16}s`;
+    heart.style.animationDelay = `${index * 0.11}s`;
     floatingHearts.appendChild(heart);
     heart.addEventListener("animationend", () => heart.remove(), { once: true });
   }
@@ -116,11 +126,13 @@ async function toggleMusic() {
   if (!audio) return;
 
   try {
-    if (audio.paused) {
+    if (!musicWanted) {
+      musicWanted = true;
       await audio.play();
       musicButton.classList.add("is-playing");
       musicButton.setAttribute("aria-label", "Выключить музыку");
     } else {
+      musicWanted = false;
       audio.pause();
       musicButton.classList.remove("is-playing");
       musicButton.setAttribute("aria-label", "Включить музыку");
@@ -140,6 +152,7 @@ async function openInvite() {
 
   if (audio) {
     try {
+      musicWanted = true;
       await audio.play();
       musicButton.classList.add("is-playing");
       musicButton.setAttribute("aria-label", "Выключить музыку");
@@ -264,6 +277,31 @@ inviteSlider?.addEventListener("keydown", (event) => {
 });
 
 musicButton?.addEventListener("click", toggleMusic);
+
+function pauseMusicWhileInactive() {
+  if (!audio || audio.paused) return;
+  audio.pause();
+  musicButton?.classList.remove("is-playing");
+}
+
+async function resumeMusicWhenActive() {
+  if (!audio || !musicWanted || document.hidden || !document.hasFocus()) return;
+
+  try {
+    await audio.play();
+    musicButton?.classList.add("is-playing");
+    musicButton?.setAttribute("aria-label", "Выключить музыку");
+  } catch {
+    musicButton?.setAttribute("aria-label", "Включить музыку");
+  }
+}
+
+document.addEventListener("visibilitychange", () => {
+  if (document.hidden) pauseMusicWhileInactive();
+  else resumeMusicWhenActive();
+});
+window.addEventListener("blur", pauseMusicWhileInactive);
+window.addEventListener("focus", resumeMusicWhenActive);
 
 weddingDayButton?.addEventListener("click", () => {
   calendarUnlocked = true;
