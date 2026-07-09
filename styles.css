@@ -587,12 +587,13 @@ p {
   filter: grayscale(0.08) contrast(0.96) saturate(0.9);
 }
 
-.polaroid-photo p {
-  margin: 18px 0 0;
+.first-quote {
+  max-width: 360px;
+  margin: 2px auto 0;
   color: var(--ink);
   font-family: var(--hand-font);
   font-size: clamp(17px, 4.7vw, 23px);
-  line-height: 1.05;
+  line-height: 1.12;
   text-align: center;
   transform: rotate(-2deg);
 }
