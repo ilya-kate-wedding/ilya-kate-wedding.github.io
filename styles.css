@@ -61,10 +61,12 @@ body::before {
   pointer-events: none;
   content: "";
   background:
-    linear-gradient(180deg, rgba(255, 254, 251, 0.4), rgba(255, 254, 251, 0.32)),
-    url("assets/lavender-doodles-bg.png") center calc(var(--page-parallax) * 0.55) / min(1040px, 230vw) auto repeat-y;
-  opacity: 0.62;
-  filter: saturate(0.95) brightness(1.04);
+    linear-gradient(180deg, rgba(255, 254, 251, 0.28), rgba(255, 254, 251, 0.18)),
+    url("assets/pine-branches-left.svg") left -18px top calc(var(--page-parallax) * 0.35) / min(360px, 76vw) auto repeat-y,
+    url("assets/pine-branches-right.svg") right -18px top calc(var(--page-parallax) * 0.35) / min(360px, 76vw) auto repeat-y,
+    url("assets/lavender-doodles-bg.png") center calc(var(--page-parallax) * 0.55) / min(1120px, 240vw) auto repeat-y;
+  opacity: 0.82;
+  filter: saturate(1.12) brightness(1.02);
   will-change: background-position;
 }
 
@@ -589,8 +591,8 @@ p {
   margin: 18px 0 0;
   color: var(--ink);
   font-family: var(--hand-font);
-  font-size: clamp(18px, 5vw, 25px);
-  line-height: 1;
+  font-size: clamp(17px, 4.7vw, 23px);
+  line-height: 1.05;
   text-align: center;
   transform: rotate(-2deg);
 }
@@ -1691,9 +1693,11 @@ form button {
 @media (max-width: 520px) {
   body::before {
     background:
-      linear-gradient(90deg, rgba(255, 254, 251, 0.1), rgba(255, 254, 251, 0.24), rgba(255, 254, 251, 0.1)),
-      url("assets/lavender-doodles-bg.png") top center / 780px auto repeat-y;
-    opacity: 0.72;
+      linear-gradient(90deg, rgba(255, 254, 251, 0.06), rgba(255, 254, 251, 0.24), rgba(255, 254, 251, 0.06)),
+      url("assets/pine-branches-left.svg") left -82px top / 235px auto repeat-y,
+      url("assets/pine-branches-right.svg") right -82px top / 235px auto repeat-y,
+      url("assets/lavender-doodles-bg.png") top center / 820px auto repeat-y;
+    opacity: 0.86;
   }
 
   .invite {
