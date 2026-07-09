@@ -1757,7 +1757,7 @@ body {
 body::before {
   background:
     linear-gradient(180deg, rgba(255, 253, 246, 0.04), rgba(242, 243, 233, 0.03)),
-    url("assets/hvoya-chalk-underlay.svg") center calc(var(--page-parallax) * 0.3) / min(720px, 190vw) auto repeat-y,
+    url("assets/hvoya-chalk-underlay.svg") center calc(var(--page-parallax) * 0.3) / min(700px, 182vw) auto repeat-y,
     url("assets/hvoya-botanical-bg.svg") center calc(var(--page-parallax) * 0.42) / min(1040px, 265vw) auto repeat-y;
   opacity: 1;
   filter: none;
@@ -1806,7 +1806,7 @@ time { color: var(--rose); }
   inset: 16px 8px;
   background:
     linear-gradient(90deg, rgba(255, 253, 246, 0.5) 0%, rgba(255, 253, 246, 0.72) 48%, rgba(255, 253, 246, 0.46) 100%),
-    url("assets/hvoya-chalk-underlay.svg") var(--section-doodles-position, center -170px) / min(560px, 145vw) auto repeat-y,
+    url("assets/hvoya-chalk-underlay.svg") var(--section-doodles-position, center -170px) / min(520px, 135vw) auto repeat-y,
     linear-gradient(120deg, rgba(255, 253, 246, 0.5), rgba(248, 247, 237, 0.34));
   border: 1px solid rgba(255, 255, 255, 0.38);
   border-radius: 28px;
@@ -1875,7 +1875,7 @@ input[type="text"] { background: rgba(255, 253, 246, 0.92); }
   body::before {
     background:
       linear-gradient(90deg, rgba(255, 253, 246, 0.03), rgba(236, 240, 229, 0.06), rgba(255, 253, 246, 0.03)),
-      url("assets/hvoya-chalk-underlay.svg") top center / 500px auto repeat-y,
+      url("assets/hvoya-chalk-underlay.svg") top center / 520px auto repeat-y,
       url("assets/hvoya-botanical-bg.svg") top center / 730px auto repeat-y;
     opacity: 1;
   }
@@ -1885,7 +1885,7 @@ input[type="text"] { background: rgba(255, 253, 246, 0.92); }
   .section::before {
     background:
       linear-gradient(90deg, rgba(255, 253, 246, 0.46) 0%, rgba(255, 253, 246, 0.72) 48%, rgba(255, 253, 246, 0.46) 100%),
-      url("assets/hvoya-chalk-underlay.svg") var(--section-doodles-position, center -170px) / 470px auto repeat-y,
+      url("assets/hvoya-chalk-underlay.svg") var(--section-doodles-position, center -170px) / 500px auto repeat-y,
       linear-gradient(120deg, rgba(255, 253, 246, 0.44), rgba(248, 247, 237, 0.3));
   }
 }
