@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 760" fill="none">
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <path d="M40 118l36-68 36 68H91l32 56H89l26 48H37l26-48H29l32-56H40Z" stroke="#3f654d" stroke-width="4" opacity=".2"/>
+    <path d="M49 119h54M61 174h51M53 222h57" stroke="#f8f3e6" stroke-width="2.2" opacity=".46"/>
+    <path d="M302 86l28-54 28 54h-16l26 45h-27l20 38h-62l20-38h-27l26-45h-16Z" stroke="#55745c" stroke-width="3.4" opacity=".22"/>
+    <path d="M307 87h42M317 132h40M310 169h45" stroke="#f8f3e6" stroke-width="2" opacity=".42"/>
+    <path d="M21 338C74 300 130 291 188 311C236 327 282 320 348 276" stroke="#385942" stroke-width="4.8" opacity=".18"/>
+    <path d="M59 319c-13-18-18-35-17-52M87 308c-4-20-2-39 6-56M121 302c4-21 14-39 31-55M241 315c10-19 25-34 45-46M278 306c17-13 35-22 57-26" stroke="#4d6f55" stroke-width="3.1" opacity=".21"/>
+    <path d="M36 452l25-49 25 49H72l22 38H71l17 32H33l17-32H27l22-38H36Z" stroke="#4f7257" stroke-width="3.5" opacity=".18"/>
+    <path d="M281 518l34-65 34 65h-20l30 52h-31l24 44h-74l24-44h-31l30-52h-20Z" stroke="#3f654d" stroke-width="4" opacity=".2"/>
+    <path d="M300 519h43M293 570h55M290 614h57" stroke="#f8f3e6" stroke-width="2.2" opacity=".42"/>
+    <path d="M50 646C95 610 142 601 190 620C238 639 285 632 344 594" stroke="#385942" stroke-width="4.4" opacity=".16"/>
+    <path d="M80 626c-10-15-14-31-13-49M113 616c-1-18 4-35 15-52M232 625c10-18 25-32 45-42M268 617c17-12 35-20 55-24" stroke="#4d6f55" stroke-width="3" opacity=".2"/>
+  </g>
+  <g fill="#9d7b45" opacity=".22">
+    <circle cx="166" cy="110" r="4"/>
+    <circle cx="206" cy="143" r="3"/>
+    <circle cx="248" cy="210" r="3.5"/>
+    <circle cx="123" cy="408" r="3.2"/>
+    <circle cx="211" cy="507" r="4"/>
+    <circle cx="169" cy="696" r="3.6"/>
+  </g>
+  <g stroke="#b99a57" stroke-width="2.2" opacity=".28" stroke-linecap="round">
+    <path d="M184 79l7 13 13 4-13 5-7 13-7-13-13-5 13-4 7-13Z"/>
+    <path d="M67 561l5 10 10 4-10 4-5 10-5-10-10-4 10-4 5-10Z"/>
+    <path d="M328 386l5 10 10 4-10 4-5 10-5-10-10-4 10-4 5-10Z"/>
+  </g>
+</svg>
