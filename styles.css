@@ -589,11 +589,12 @@ p {
 
 .first-quote {
   max-width: 360px;
-  margin: 4px auto 0;
+  margin: 4px auto 16px;
   color: var(--muted);
   font-family: var(--body-font);
-  font-size: clamp(17px, 4.2vw, 20px);
-  line-height: 1.45;
+  font-size: clamp(18px, 4.8vw, 24px);
+  line-height: 1.36;
+  font-weight: 400;
   text-align: center;
   transform: none;
 }
