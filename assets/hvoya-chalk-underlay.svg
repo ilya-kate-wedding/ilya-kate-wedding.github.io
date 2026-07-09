@@ -1,28 +1,42 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 760" fill="none">
-  <g stroke-linecap="round" stroke-linejoin="round">
-    <path d="M40 118l36-68 36 68H91l32 56H89l26 48H37l26-48H29l32-56H40Z" stroke="#3f654d" stroke-width="4" opacity=".2"/>
-    <path d="M49 119h54M61 174h51M53 222h57" stroke="#f8f3e6" stroke-width="2.2" opacity=".46"/>
-    <path d="M302 86l28-54 28 54h-16l26 45h-27l20 38h-62l20-38h-27l26-45h-16Z" stroke="#55745c" stroke-width="3.4" opacity=".22"/>
-    <path d="M307 87h42M317 132h40M310 169h45" stroke="#f8f3e6" stroke-width="2" opacity=".42"/>
-    <path d="M21 338C74 300 130 291 188 311C236 327 282 320 348 276" stroke="#385942" stroke-width="4.8" opacity=".18"/>
-    <path d="M59 319c-13-18-18-35-17-52M87 308c-4-20-2-39 6-56M121 302c4-21 14-39 31-55M241 315c10-19 25-34 45-46M278 306c17-13 35-22 57-26" stroke="#4d6f55" stroke-width="3.1" opacity=".21"/>
-    <path d="M36 452l25-49 25 49H72l22 38H71l17 32H33l17-32H27l22-38H36Z" stroke="#4f7257" stroke-width="3.5" opacity=".18"/>
-    <path d="M281 518l34-65 34 65h-20l30 52h-31l24 44h-74l24-44h-31l30-52h-20Z" stroke="#3f654d" stroke-width="4" opacity=".2"/>
-    <path d="M300 519h43M293 570h55M290 614h57" stroke="#f8f3e6" stroke-width="2.2" opacity=".42"/>
-    <path d="M50 646C95 610 142 601 190 620C238 639 285 632 344 594" stroke="#385942" stroke-width="4.4" opacity=".16"/>
-    <path d="M80 626c-10-15-14-31-13-49M113 616c-1-18 4-35 15-52M232 625c10-18 25-32 45-42M268 617c17-12 35-20 55-24" stroke="#4d6f55" stroke-width="3" opacity=".2"/>
-  </g>
-  <g fill="#9d7b45" opacity=".22">
-    <circle cx="166" cy="110" r="4"/>
-    <circle cx="206" cy="143" r="3"/>
-    <circle cx="248" cy="210" r="3.5"/>
-    <circle cx="123" cy="408" r="3.2"/>
-    <circle cx="211" cy="507" r="4"/>
-    <circle cx="169" cy="696" r="3.6"/>
-  </g>
-  <g stroke="#b99a57" stroke-width="2.2" opacity=".28" stroke-linecap="round">
-    <path d="M184 79l7 13 13 4-13 5-7 13-7-13-13-5 13-4 7-13Z"/>
-    <path d="M67 561l5 10 10 4-10 4-5 10-5-10-10-4 10-4 5-10Z"/>
-    <path d="M328 386l5 10 10 4-10 4-5 10-5-10-10-4 10-4 5-10Z"/>
+  <defs>
+    <g id="long-sprig" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M0 0C42-9 88-26 134-54" stroke-width="4"/>
+      <path d="M14-3 3-28M26-8 12-37M38-13 21-44M51-18 31-51M64-24 41-58M78-31 54-66M93-39 70-74M109-47 89-80"/>
+      <path d="M17-4 27 19M31-9 44 19M45-14 61 18M59-20 78 15M73-27 94 9M88-35 110 1M104-44 125-10M121-53 139-23"/>
+    </g>
+    <g id="soft-sprig" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M0 0C31-6 66-19 101-39" stroke-width="3.2"/>
+      <path d="M11-3 2-22M21-6 10-29M32-10 18-35M43-14 27-42M55-19 38-48M68-25 51-54M82-32 68-59"/>
+      <path d="M13-3 23 15M25-7 37 14M37-11 52 11M49-16 66 7M62-22 80 1M76-29 94-8M90-37 105-17"/>
+    </g>
+    <g id="fan-sprig" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M0 72C3 37 1 11-6-8" stroke-width="5"/>
+      <path d="M-5 15C-39-4-62-22-78-44M-4 11C-31 1-55-8-78-18M-3 7C-31 9-55 12-76 19M-2 3C-28 20-49 37-64 55"/>
+      <path d="M-4 16C20 0 42-19 59-42M-3 11C24 2 48-7 72-16M-2 7C27 9 54 15 79 24M-1 3C26 20 49 39 67 62"/>
+    </g>
+    <g id="tiny-branch" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M0 0C20-4 39-12 57-25" stroke-width="2.8"/>
+      <path d="M9-2 1-16M18-5 8-22M28-9 16-27M39-14 27-31M49-20 40-35"/>
+      <path d="M11-2 18 11M21-6 31 10M32-10 44 7M44-16 55 1"/>
+    </g>
+  </defs>
+  <rect width="390" height="760" fill="#fffdf8" opacity=".16"/>
+  <g stroke-width="1.45">
+    <use href="#long-sprig" x="34" y="96" color="#244d3b" opacity=".58" transform="rotate(85 34 96)"/>
+    <use href="#soft-sprig" x="148" y="66" color="#8aa06f" opacity=".48" transform="rotate(15 148 66)"/>
+    <use href="#fan-sprig" x="314" y="58" color="#5f8a61" opacity=".5" transform="rotate(-16 314 58) scale(.72)"/>
+    <use href="#long-sprig" x="280" y="158" color="#2f6046" opacity=".5" transform="rotate(-155 280 158) scale(.84)"/>
+    <use href="#tiny-branch" x="93" y="206" color="#b5c39a" opacity=".52" transform="rotate(-18 93 206) scale(1.2)"/>
+    <use href="#soft-sprig" x="248" y="240" color="#3f744e" opacity=".5" transform="rotate(-24 248 240) scale(1.1)"/>
+    <use href="#long-sprig" x="45" y="310" color="#315541" opacity=".5" transform="rotate(-28 45 310) scale(.95)"/>
+    <use href="#fan-sprig" x="174" y="342" color="#6f8f62" opacity=".5" transform="rotate(7 174 342) scale(.76)"/>
+    <use href="#tiny-branch" x="320" y="330" color="#a6b887" opacity=".55" transform="rotate(78 320 330) scale(1.25)"/>
+    <use href="#soft-sprig" x="76" y="438" color="#4b7b54" opacity=".49" transform="rotate(98 76 438) scale(1.08)"/>
+    <use href="#long-sprig" x="210" y="462" color="#2d5a43" opacity=".5" transform="rotate(22 210 462) scale(.9)"/>
+    <use href="#fan-sprig" x="338" y="512" color="#5f8a61" opacity=".48" transform="rotate(15 338 512) scale(.65)"/>
+    <use href="#tiny-branch" x="52" y="580" color="#9fb28a" opacity=".5" transform="rotate(-148 52 580) scale(1.28)"/>
+    <use href="#long-sprig" x="148" y="640" color="#386548" opacity=".48" transform="rotate(-83 148 640) scale(.92)"/>
+    <use href="#soft-sprig" x="308" y="676" color="#78946a" opacity=".5" transform="rotate(158 308 676) scale(1.04)"/>
   </g>
 </svg>
