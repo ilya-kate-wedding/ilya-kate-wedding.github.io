@@ -1047,7 +1047,7 @@ form button {
 
 .final-collage {
   position: relative;
-  width: min(90vw, 390px);
+  width: min(86vw, 370px);
   aspect-ratio: 3 / 4;
   margin: 0 auto 28px;
   overflow: hidden;
@@ -1068,6 +1068,14 @@ form button {
 .final-collage .final-face {
   z-index: 2;
   will-change: transform;
+}
+
+.final-face-man {
+  translate: 3% 0;
+}
+
+.final-face-woman {
+  translate: -5% 0;
 }
 
 .final.is-visible .final-face-man {
@@ -2031,5 +2039,25 @@ h3 {
 
   .place-actions a {
     width: 100%;
+  }
+}
+
+/* The family finale needs a calmer, more solid canvas than the other sections. */
+.final::before {
+  background:
+    linear-gradient(140deg, rgba(255, 253, 246, 0.86), rgba(248, 247, 237, 0.68)),
+    radial-gradient(circle at 50% 18%, rgba(255, 255, 255, 0.48), transparent 18rem);
+  border-color: rgba(80, 107, 88, 0.26);
+  box-shadow:
+    0 24px 70px rgba(36, 50, 41, 0.09),
+    inset 0 1px 0 rgba(255, 255, 255, 0.68);
+  backdrop-filter: blur(1.4px);
+}
+
+@media (max-width: 520px) {
+  .final::before {
+    background:
+      linear-gradient(140deg, rgba(255, 253, 246, 0.9), rgba(248, 247, 237, 0.72)),
+      radial-gradient(circle at 50% 16%, rgba(255, 255, 255, 0.52), transparent 14rem);
   }
 }
