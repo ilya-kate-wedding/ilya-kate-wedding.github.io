@@ -918,7 +918,13 @@ form button {
   width: min(150px, 46vw);
   margin: 18px auto 0;
   overflow: hidden;
-  border-radius: 12px;
+  pointer-events: none;
+}
+
+.wish-gif img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .free-style {
