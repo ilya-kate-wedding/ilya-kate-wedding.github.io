@@ -1899,13 +1899,19 @@ input[type="text"] { background: rgba(255, 253, 246, 0.92); }
 
 @media (max-width: 520px) {
   body::before {
+    position: absolute;
     background:
       linear-gradient(90deg, rgba(255, 253, 246, 0.04), rgba(255, 253, 246, 0.08), rgba(255, 253, 246, 0.04)),
       url("assets/fir-reference-bg.webp") top center / 760px auto repeat-y;
+    will-change: auto;
     opacity: 1;
   }
 
-  .invite { background: rgba(255, 253, 246, 0.24); }
+  .invite {
+    background: rgba(255, 253, 246, 0.72);
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
 
   .section::before {
     background: linear-gradient(120deg, rgba(255, 253, 246, 0.66), rgba(255, 253, 246, 0.5));
@@ -2020,6 +2026,7 @@ h3 {
       url("assets/fir-reference-bg.webp") top center / 150vw auto repeat-y;
     opacity: 0.68;
     filter: saturate(0.72) brightness(1.1);
+    will-change: auto;
   }
 
   .invite {
@@ -2031,6 +2038,13 @@ h3 {
     background:
       linear-gradient(140deg, rgba(255, 253, 246, 0.74), rgba(248, 247, 237, 0.52)),
       radial-gradient(circle at 18% 10%, rgba(255, 255, 255, 0.38), transparent 12rem);
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+
+  .calendar-card {
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
   }
 
   .place-actions {
