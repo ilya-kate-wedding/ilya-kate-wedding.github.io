@@ -181,15 +181,15 @@
             <input type="text" name="Имя" autocomplete="name" required>
           </label>
           <fieldset>
-            <legend>Вы придёте не одни?</legend>
-            <label><input type="checkbox" name="С семьёй или близкими" value="Да"> Приду с семьёй / близкими</label>
-          </fieldset>
-          <fieldset>
             <legend>Сможете ли вы присутствовать?</legend>
             <label><input type="radio" name="Присутствие" value="Смогу прийти" required> Смогу прийти</label>
             <label><input type="radio" name="Присутствие" value="Не смогу прийти"> Не смогу прийти</label>
             <label><input type="radio" name="Присутствие" value="Сообщу позже"> Сообщу позже</label>
           </fieldset>
+          <label>
+            <span>Сколько человек придёт вместе с вами, включая вас?</span>
+            <input type="number" name="Количество человек" min="1" inputmode="numeric" placeholder="Например, 2">
+          </label>
           <fieldset>
             <legend>Нужен ли вам трансфер?</legend>
             <label><input type="radio" name="Трансфер" value="Да, нужен"> Да, нужен</label>
