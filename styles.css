@@ -1060,44 +1060,44 @@ form button {
 }
 
 .final-sticker-star {
-  --sticker-width: 38px;
+  --sticker-width: 28px;
   top: 14%;
   left: 47%;
   transform: rotate(-6deg);
 }
 
 .final-sticker-flower {
-  --sticker-width: 52px;
-  top: 41%;
-  left: 46%;
+  --sticker-width: 38px;
+  top: 45%;
+  left: 45%;
   transform: rotate(10deg);
 }
 
 .final-sticker-fern {
-  --sticker-width: 54px;
-  top: 7%;
-  right: 9%;
+  --sticker-width: 40px;
+  left: 24%;
+  bottom: 1%;
   transform: rotate(15deg);
 }
 
 .final-sticker-eucalyptus {
-  --sticker-width: 60px;
-  top: 30%;
-  left: 6%;
+  --sticker-width: 32px;
+  top: 45%;
+  left: 4%;
   transform: rotate(-24deg);
 }
 
 .final-sticker-bow {
-  --sticker-width: 62px;
-  left: 45%;
-  bottom: 19%;
+  --sticker-width: 46px;
+  left: 44%;
+  bottom: 1%;
   transform: rotate(6deg);
 }
 
 .final-sticker-heart {
-  --sticker-width: 38px;
-  left: 10%;
-  bottom: 23%;
+  --sticker-width: 32px;
+  top: 46%;
+  right: 3%;
   transform: rotate(-9deg);
 }
 
