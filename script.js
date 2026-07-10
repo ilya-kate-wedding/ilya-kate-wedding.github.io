@@ -22,6 +22,7 @@ let calendarUnlocked = false;
 let lastTouchY = 0;
 let parallaxTicking = false;
 let lastHeartBurst = 0;
+const mobileMotionQuery = window.matchMedia("(max-width: 520px)");
 
 const revealObserver = new IntersectionObserver(
   (entries) => {
@@ -59,7 +60,8 @@ updateDoodles();
 window.addEventListener("scroll", updateDoodles, { passive: true });
 
 function updateParallax() {
-  document.documentElement.style.setProperty("--page-parallax", `${Math.round(window.scrollY * -0.1)}px`);
+  const offset = mobileMotionQuery.matches ? 0 : Math.round(window.scrollY * -0.1);
+  document.documentElement.style.setProperty("--page-parallax", `${offset}px`);
   parallaxTicking = false;
 }
 
@@ -76,7 +78,7 @@ function spawnFloatingHearts(force = false) {
   if (!floatingHearts || document.body.classList.contains("is-locked")) return;
 
   const now = Date.now();
-  if (!force && now - lastHeartBurst < 1100) return;
+  if (!force && now - lastHeartBurst < 1600) return;
   lastHeartBurst = now;
 
   const side = Math.random() > 0.5 ? "right" : "left";
@@ -89,7 +91,7 @@ function spawnFloatingHearts(force = false) {
     "rgba(217, 190, 133, 0.86)",
   ];
 
-  for (let index = 0; index < 6; index += 1) {
+  for (let index = 0; index < 4; index += 1) {
     const heart = document.createElement("span");
     heart.className = "float-heart-burst";
     heart.style.setProperty("--x", `${baseX + (Math.random() * 13 - 6.5)}vw`);

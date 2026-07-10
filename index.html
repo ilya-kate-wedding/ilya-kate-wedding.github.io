@@ -7,7 +7,7 @@
     <meta name="description" content="Свадебное приглашение Ильи и Екатерины">
     <link rel="preload" href="assets/DkCrayonCrumble-ddll.ttf" as="font" type="font/ttf" crossorigin>
     <link rel="preload" href="assets/Lora-Variable.ttf" as="font" type="font/ttf" crossorigin>
-    <link rel="stylesheet" href="styles.css?v=20260710-performance-clean-final">
+    <link rel="stylesheet" href="styles.css?v=20260710-editorial-refinement">
   </head>
   <body class="is-locked">
     <div class="start-screen" id="start-screen">
@@ -146,7 +146,10 @@
           <p class="tiny">Место проведения</p>
           <h2>Загородный комплекс «Хвоя»</h2>
           <p>Будем ждать вас среди сосен, тёплого света и самых близких людей — в загородном комплексе «Хвоя».</p>
-          <a href="https://www.xn-----dlccbie7a3aocdd5ap1dwk.xn--p1ai/" target="_blank" rel="noreferrer">Открыть сайт площадки</a>
+          <div class="place-actions">
+            <a href="https://www.xn-----dlccbie7a3aocdd5ap1dwk.xn--p1ai/" target="_blank" rel="noreferrer">Сайт площадки</a>
+            <a class="route-link" href="https://yandex.ru/maps/-/CTBM7ZK1" target="_blank" rel="noreferrer">Построить маршрут</a>
+          </div>
         </div>
         <div class="venue-illustration">
           <img src="assets/venue-hvoya.webp" alt="Загородный комплекс Хвоя" loading="lazy" decoding="async">
@@ -191,6 +194,12 @@
             <label><input type="radio" name="Присутствие" value="Сообщу позже"> Сообщу позже</label>
           </fieldset>
           <fieldset>
+            <legend>Нужен ли вам трансфер?</legend>
+            <label><input type="radio" name="Трансфер" value="Да, нужен"> Да, нужен</label>
+            <label><input type="radio" name="Трансфер" value="Нет, доберусь самостоятельно"> Нет, доберусь самостоятельно</label>
+            <label><input type="radio" name="Трансфер" value="Пока не знаю"> Пока не знаю</label>
+          </fieldset>
+          <fieldset>
             <legend>Предпочтения по напиткам</legend>
             <label><input type="checkbox" name="Напитки" value="Шампанское"> Шампанское</label>
             <label><input type="checkbox" name="Напитки" value="Белое вино"> Белое вино</label>
@@ -215,10 +224,11 @@
         </div>
         <p>С большой любовью,</p>
         <h2>Илья и Екатерина!</h2>
+        <p class="final-date">04 сентября 2026</p>
         <p>Будем вас ждать!</p>
       </footer>
     </main>
 
-    <script src="script.js?v=20260707-forest-hearts"></script>
+    <script src="script.js?v=20260710-editorial-refinement"></script>
   </body>
 </html>
