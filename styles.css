@@ -1945,10 +1945,21 @@ body {
 
 body::before {
   background:
-    linear-gradient(90deg, rgba(255, 253, 246, 0.34), rgba(255, 253, 246, 0.12) 22%, rgba(255, 253, 246, 0.12) 78%, rgba(255, 253, 246, 0.34)),
-    url("assets/hvoya-botanical-bg.svg") center calc(var(--page-parallax) * 0.32) / min(1080px, 265vw) auto repeat-y;
-  opacity: 0.58;
-  filter: saturate(0.68) brightness(1.12);
+    linear-gradient(90deg, rgba(255, 253, 246, 0.2), rgba(255, 253, 246, 0.06) 22%, rgba(255, 253, 246, 0.06) 78%, rgba(255, 253, 246, 0.2)),
+    url("assets/fir-reference-bg.png") center calc(var(--page-parallax) * 0.32) / min(1200px, 100vw) auto repeat-y;
+  opacity: 0.68;
+  filter: saturate(0.72) brightness(1.1);
+}
+
+/* The crayon font has tall ascenders and descenders; give them room on narrow screens. */
+h2 {
+  line-height: 1.1;
+  padding-block: 0.06em 0.1em;
+}
+
+h3 {
+  line-height: 1.12;
+  padding-block: 0.04em 0.08em;
 }
 
 .invite {
@@ -2021,10 +2032,10 @@ body::before {
 @media (max-width: 520px) {
   body::before {
     background:
-      linear-gradient(90deg, rgba(255, 253, 246, 0.24), rgba(236, 240, 229, 0.12), rgba(255, 253, 246, 0.24)),
-      url("assets/hvoya-botanical-bg.svg") top center / 780px auto repeat-y;
-    opacity: 0.58;
-    filter: saturate(0.68) brightness(1.12);
+      linear-gradient(90deg, rgba(255, 253, 246, 0.18), rgba(236, 240, 229, 0.05), rgba(255, 253, 246, 0.18)),
+      url("assets/fir-reference-bg.png") top center / 150vw auto repeat-y;
+    opacity: 0.68;
+    filter: saturate(0.72) brightness(1.1);
   }
 
   .invite {
