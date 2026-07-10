@@ -915,7 +915,7 @@ form button {
 }
 
 .wish-gif {
-  width: min(150px, 46vw);
+  width: min(75px, 23vw);
   margin: 18px auto 0;
   overflow: hidden;
   pointer-events: none;
