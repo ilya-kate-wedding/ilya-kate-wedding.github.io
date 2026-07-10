@@ -17,6 +17,7 @@
 }
 
 :root {
+  color-scheme: light;
   --bg: #f3f0e7;
   --bg-soft: #e6eadf;
   --ink: #243229;
@@ -2020,6 +2021,46 @@ h3 {
 }
 
 @media (max-width: 520px) {
+  html,
+  body {
+    background-color: #f1f2e9;
+  }
+
+  .start-screen {
+    transform: none;
+    transition: opacity 0.35s ease, visibility 0.35s ease;
+  }
+
+  .start-screen.is-opened {
+    transform: none;
+  }
+
+  .heart-scene,
+  .heart,
+  .heart-slider {
+    animation: none;
+  }
+
+  .section {
+    isolation: auto;
+  }
+
+  .reveal,
+  .reveal.is-visible {
+    transform: none;
+  }
+
+  .section.reveal > :where(.names-block, .tiny, h2, h3, p, .flower-doodle, .calendar-card, .calendar-hint, .program-grid, .venue-illustration, .dress-note, form, .final-collage),
+  .section.reveal.is-visible > :where(.names-block, .tiny, h2, h3, p, .flower-doodle, .calendar-card, .calendar-hint, .program-grid, .venue-illustration, .dress-note, form, .final-collage) {
+    transform: none;
+  }
+
+  .polaroid-photo,
+  .place.is-visible .venue-illustration,
+  .date-section.is-visible .calendar-card {
+    animation: none;
+  }
+
   body::before {
     background:
       linear-gradient(90deg, rgba(255, 253, 246, 0.18), rgba(236, 240, 229, 0.05), rgba(255, 253, 246, 0.18)),
