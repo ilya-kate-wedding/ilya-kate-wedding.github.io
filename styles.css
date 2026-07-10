@@ -42,14 +42,14 @@
 html {
   scroll-behavior: smooth;
   overscroll-behavior-y: none;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 body {
   position: relative;
   margin: 0;
   min-width: 320px;
-  overflow-x: hidden;
+  overflow-x: clip;
   overscroll-behavior-y: none;
   color: var(--ink);
   background: linear-gradient(180deg, #fffefa 0%, var(--bg) 54%, #f7f3fb 100%);
@@ -1974,13 +1974,13 @@ h3 {
 .section::before {
   inset: clamp(16px, 4vw, 28px) clamp(8px, 3vw, 18px);
   background:
-    linear-gradient(140deg, rgba(255, 253, 246, 0.58), rgba(248, 247, 237, 0.28)),
-    radial-gradient(circle at 24% 12%, rgba(255, 255, 255, 0.32), transparent 16rem);
-  border: 1px solid rgba(255, 255, 255, 0.46);
+    linear-gradient(140deg, rgba(255, 253, 246, 0.72), rgba(248, 247, 237, 0.5)),
+    radial-gradient(circle at 24% 12%, rgba(255, 255, 255, 0.38), transparent 16rem);
+  border: 1px solid rgba(255, 255, 255, 0.58);
   border-radius: 30px;
   box-shadow:
-    0 24px 70px rgba(36, 50, 41, 0.045),
-    inset 0 1px 0 rgba(255, 255, 255, 0.42);
+    0 24px 70px rgba(36, 50, 41, 0.07),
+    inset 0 1px 0 rgba(255, 255, 255, 0.54);
   backdrop-filter: blur(0.8px);
 }
 
@@ -2047,7 +2047,7 @@ h3 {
   .section::before {
     inset: 14px 4px;
     background:
-      linear-gradient(140deg, rgba(255, 253, 246, 0.54), rgba(248, 247, 237, 0.24)),
-      radial-gradient(circle at 18% 10%, rgba(255, 255, 255, 0.28), transparent 12rem);
+      linear-gradient(140deg, rgba(255, 253, 246, 0.74), rgba(248, 247, 237, 0.52)),
+      radial-gradient(circle at 18% 10%, rgba(255, 255, 255, 0.38), transparent 12rem);
   }
 }
