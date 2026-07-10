@@ -7,7 +7,7 @@
     <meta name="description" content="Свадебное приглашение Ильи и Екатерины">
     <link rel="preload" href="assets/DkCrayonCrumble-ddll.ttf" as="font" type="font/ttf" crossorigin>
     <link rel="preload" href="assets/Lora-Variable.ttf" as="font" type="font/ttf" crossorigin>
-    <link rel="stylesheet" href="styles.css?v=20260710-scroll-and-cards-fix">
+    <link rel="stylesheet" href="styles.css?v=20260710-performance-clean-final">
   </head>
   <body class="is-locked">
     <div class="start-screen" id="start-screen">
@@ -55,14 +55,14 @@
     <main class="invite">
       <section class="section first reveal">
         <div class="polaroid-photo">
-          <img src="assets/photo1.jpeg" alt="Илья и Екатерина">
+          <img src="assets/photo1.webp" alt="Илья и Екатерина" decoding="async" fetchpriority="high">
         </div>
         <p class="first-quote">Семья - это место, где начинается жизнь и никогда не заканчивается любовь.</p>
       </section>
 
       <section class="section message reveal">
         <h3>Дорогие и Любимые</h3>
-        <img class="flower-doodle" src="assets/flower-transparent.png" alt="" aria-hidden="true">
+        <img class="flower-doodle" src="assets/flower-transparent.png" alt="" aria-hidden="true" loading="lazy" decoding="async">
         <p>С радостью приглашаем вас на день рождения нашей семьи - день, который станет началом новой главы нашей жизни!</p>
         <div class="hand-line" aria-hidden="true"></div>
       </section>
@@ -149,7 +149,7 @@
           <a href="https://www.xn-----dlccbie7a3aocdd5ap1dwk.xn--p1ai/" target="_blank" rel="noreferrer">Открыть сайт площадки</a>
         </div>
         <div class="venue-illustration">
-          <img src="assets/venue-hvoya.jpg" alt="Загородный комплекс Хвоя">
+          <img src="assets/venue-hvoya.webp" alt="Загородный комплекс Хвоя" loading="lazy" decoding="async">
         </div>
       </section>
 
@@ -208,16 +208,10 @@
 
       <footer class="section final reveal" id="final">
         <div class="final-collage" role="img" aria-label="Бумажные вырезки с Ильёй, Екатериной, Дусей и Марсом">
-          <img class="final-sticker final-sticker-star" src="assets/final-decor-v2-star.png" alt="">
-          <img class="final-sticker final-sticker-flower" src="assets/final-decor-v2-flower.png" alt="">
-          <img class="final-sticker final-sticker-fern" src="assets/final-decor-v2-fern.png" alt="">
-          <img class="final-sticker final-sticker-eucalyptus" src="assets/final-decor-v2-eucalyptus.png" alt="">
-          <img class="final-sticker final-sticker-bow" src="assets/final-decor-v2-bow.png" alt="">
-          <img class="final-sticker final-sticker-heart" src="assets/final-decor-v2-heart.png" alt="">
-          <img class="final-layer final-face final-face-man" src="assets/final-family-man-v3.png" alt="">
-          <img class="final-layer final-face final-face-woman" src="assets/final-family-woman-v2.png" alt="">
-          <img class="final-layer final-face final-face-dog" src="assets/final-family-dog-v2.png" alt="">
-          <img class="final-layer final-face final-face-cat" src="assets/final-family-cat-v2.png" alt="">
+          <img class="final-layer final-face final-face-man" src="assets/final-family-man-v3.png" alt="" loading="lazy" decoding="async">
+          <img class="final-layer final-face final-face-woman" src="assets/final-family-woman-v2.png" alt="" loading="lazy" decoding="async">
+          <img class="final-layer final-face final-face-dog" src="assets/final-family-dog-v2.png" alt="" loading="lazy" decoding="async">
+          <img class="final-layer final-face final-face-cat" src="assets/final-family-cat-v2.png" alt="" loading="lazy" decoding="async">
         </div>
         <p>С большой любовью,</p>
         <h2>Илья и Екатерина!</h2>

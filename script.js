@@ -142,7 +142,7 @@ async function toggleMusic() {
   }
 }
 
-async function openInvite() {
+function openInvite() {
   if (startScreen?.classList.contains("is-opened")) return;
 
   document.body.classList.remove("is-locked");
@@ -150,15 +150,18 @@ async function openInvite() {
   document.querySelector(".first")?.classList.add("is-visible");
   window.setTimeout(() => spawnFloatingHearts(true), 520);
 
-  if (audio) {
-    try {
-      musicWanted = true;
-      await audio.play();
-      musicButton.classList.add("is-playing");
-      musicButton.setAttribute("aria-label", "Выключить музыку");
-    } catch {
-      musicButton.setAttribute("aria-label", "Включить музыку");
-    }
+}
+
+async function startWeddingMusic() {
+  if (!audio) return;
+
+  try {
+    musicWanted = true;
+    await audio.play();
+    musicButton.classList.add("is-playing");
+    musicButton.setAttribute("aria-label", "Выключить музыку");
+  } catch {
+    musicButton.setAttribute("aria-label", "Включить музыку");
   }
 }
 
@@ -201,13 +204,15 @@ async function completeInviteUnlock() {
   setSliderProgress(sliderMax);
   inviteSlider?.classList.add("is-complete");
 
-  await playUnlockSound();
+  const unlockSoundFinished = playUnlockSound();
+  openInvite();
+  await unlockSoundFinished;
 
   if (audio) {
     audio.currentTime = 0;
     audio.muted = false;
   }
-  await openInvite();
+  await startWeddingMusic();
 }
 
 function primeSliderAudio() {
