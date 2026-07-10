@@ -914,6 +914,13 @@ form button {
   align-content: center;
 }
 
+.wish-gif {
+  width: min(150px, 46vw);
+  margin: 18px auto 0;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
 .free-style {
   display: flex;
   justify-content: center;
