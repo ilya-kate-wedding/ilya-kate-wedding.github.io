@@ -9,7 +9,116 @@
     <meta name="description" content="Свадебное приглашение Ильи и Екатерины">
     <link rel="preload" href="assets/DkCrayonCrumble-ddll.ttf" as="font" type="font/ttf" crossorigin>
     <link rel="preload" href="assets/Lora-Variable.ttf" as="font" type="font/ttf" crossorigin>
-    <link rel="stylesheet" href="styles.css?v=20260710-wish-gif-small">
+    <link rel="stylesheet" href="styles.css?v=20260713-android-start-fallback">
+    <style>
+      html,
+      body {
+        min-height: 100%;
+        margin: 0;
+        background: #fbfaf4;
+      }
+
+      body.is-locked {
+        overflow: hidden;
+      }
+
+      .start-screen {
+        position: fixed;
+        inset: 0;
+        z-index: 50;
+        display: grid;
+        grid-template-rows: 1fr auto auto auto auto 1fr;
+        justify-items: center;
+        align-items: center;
+        padding: 48px 28px 34px;
+        color: #243229;
+        text-align: center;
+        background:
+          radial-gradient(ellipse at 50% 0%, rgba(215, 224, 207, 0.82), transparent 48%),
+          linear-gradient(180deg, #fbfaf3 0%, #e8ede2 100%);
+      }
+
+      .start-screen.is-opened {
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      .start-screen h1 {
+        grid-row: 3;
+        margin: 0;
+        font-family: "DK Crayon Crumble", "Segoe Print", cursive;
+        font-size: clamp(50px, 15vw, 86px);
+        font-weight: 400;
+        line-height: 0.94;
+      }
+
+      .heart-scene {
+        position: relative;
+        grid-row: 2;
+        width: 168px;
+        height: 126px;
+        margin-bottom: 34px;
+      }
+
+      .heart {
+        position: absolute;
+        display: block;
+        background: #315541;
+        transform: rotate(-45deg);
+      }
+
+      .heart::before,
+      .heart::after {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        content: "";
+        background: inherit;
+        border-radius: 50%;
+      }
+
+      .heart::before {
+        top: -50%;
+        left: 0;
+      }
+
+      .heart::after {
+        top: 0;
+        left: 50%;
+      }
+
+      .heart-main {
+        left: 58px;
+        top: 36px;
+        width: 50px;
+        height: 50px;
+      }
+
+      .heart-left {
+        left: 20px;
+        top: 58px;
+        width: 28px;
+        height: 28px;
+        background: #769078;
+      }
+
+      .heart-right {
+        right: 22px;
+        top: 18px;
+        width: 32px;
+        height: 32px;
+        background: #d4b77c;
+      }
+
+      .heart-slider {
+        grid-row: 6;
+        width: min(76vw, 292px);
+        height: 58px;
+        border: 1px solid rgba(52, 49, 63, 0.18);
+        border-radius: 999px;
+        background: rgba(255, 254, 251, 0.96);
+      }
+    </style>
   </head>
   <body class="is-locked">
     <div class="start-screen" id="start-screen">
